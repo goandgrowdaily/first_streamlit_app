@@ -1,4 +1,6 @@
 import streamlit
+import snowflake.connector
+
 
 streamlit.title('My Parents New Healthy Diner')
 streamlit.header('Breakfast Fevorites')
@@ -19,4 +21,3 @@ streamlit.dataframe(fruits_to_show)
 
 
 
-import snowflake.connector
