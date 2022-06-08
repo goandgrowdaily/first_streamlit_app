@@ -1,4 +1,5 @@
 import streamlit
+import sklearn
 import snowflake.connector
 
 
