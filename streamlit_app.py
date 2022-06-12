@@ -28,3 +28,6 @@ streamlit.text("The fruit load list contain : ")
 streamlit.text(my_data_rows)
 streamlit.header("The fruit load list contains  ")
 streamlit.dataframe(my_data_rows)
+
+streamlit.header('What would you like to add')
+#add_my_fruit = 
