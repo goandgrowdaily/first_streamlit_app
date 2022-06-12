@@ -1,4 +1,3 @@
-# requirments.txt
-scikit-learn
+#requirments.txt
 snowflake-connector-python
 
