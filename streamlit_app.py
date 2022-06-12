@@ -30,4 +30,4 @@ streamlit.header("The fruit load list contains  ")
 streamlit.dataframe(my_data_rows)
 
 streamlit.header('What would you like to add')
-add_my_fruit = streamlit.multiselect()
+add_my_fruit = streamlit.text_input('add the fruit:')
