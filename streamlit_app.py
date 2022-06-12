@@ -22,7 +22,7 @@ streamlit.dataframe(fruits_to_show)
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
-my_cur.execute("SELECT * from fruit_load_list")
+my_cur.execute("insert into fruit_load_list values ('from_strealit')")
 my_data_rows = my_cur.fetchall()
 streamlit.text("The fruit load list contain : ")
 streamlit.text(my_data_rows)
