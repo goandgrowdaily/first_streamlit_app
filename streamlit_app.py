@@ -20,6 +20,17 @@ fruits_selected=streamlit.multiselect("Pick some fruits:",list(my_fruit_list.ind
 fruits_to_show=my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
+#new sectioin to dispaly fruitvice api response
+streamlit.header('Fruitvice Fruit Advice !  ')
+try:
+  fruit_choice = streamlit.text_input('What fruit information would like to have?','Kiwi')
+  if not fruit_choice:
+    streamlit.error("Please select a fruit to get information.")
+  else:
+    fruityvice_responce = request.get("https://fruityvice.com/api/fruit/" + fruit_choice)
+    fruityvice_normalized = pandas.json_normalize(fruityvice_responce.json())
+    strealit.dataframe(fruityvice_normalize)
+
 #stop past run
 streamlit.stop()
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
