@@ -31,4 +31,5 @@ streamlit.dataframe(my_data_rows)
 
 streamlit.header('What would you like to add')
 add_my_fruit = streamlit.text_input('add the fruit:')
+if add_my_fruit is not null:
 streamlit.write('Thanks for adding fruit : ',add_my_fruit)
