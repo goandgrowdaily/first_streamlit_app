@@ -23,7 +23,7 @@ streamlit.dataframe(fruits_to_show)
 #new sectioin to dispaly fruitvice api response
 streamlit.header('Fruitvice Fruit Advice !  ')
 try:
-  fruit_choice = streamlit.text_input('What fruit information would like to have?','Kiwi')
+  fruit_choice = streamlit.text_input('What fruit information would like to have?')
   if not fruit_choice:
     streamlit.error("Please select a fruit to get information.")
   else:
